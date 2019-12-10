@@ -8,6 +8,7 @@ import { PowerBoosterComponent } from "./power-booster.component";
 import { ExponentialStrengthPipe } from "./exponential-strength.pipe";
 import { UnlessDirective } from "./unless.directive";
 import { MessageComponent } from "./message.component";
+import { TodoListComponent } from "./todo-list/todo-list.component";
 
 @NgModule({
   declarations: [
@@ -16,9 +17,11 @@ import { MessageComponent } from "./message.component";
     ExponentialStrengthPipe,
     BirthdayComponent,
     UnlessDirective,
-    MessageComponent
+    MessageComponent,
+    TodoListComponent
   ],
   imports: [BrowserModule, FormsModule],
+  exports: [TodoListComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
