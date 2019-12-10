@@ -1,0 +1,45 @@
+<a id="toc"></a>
+<h2>Gemini翔 Angular學習日記</h2>
+
+<hr />
+<app-message></app-message>
+
+<hr />
+<a id="happy-birthday2"></a>
+<h2>Hero Birthday v2</h2>
+<app-birthday></app-birthday>
+
+<hr />
+<a id="power-booster"></a>
+<app-power-booster></app-power-booster>
+
+<hr />
+<h2 id="appUnless">UnlessDirective</h2>
+<p>
+  The condition is currently
+  <span [ngClass]="{ 'a': !condition, 'b': condition, 'unless': true }"
+    >{{condition}}</span
+  >.
+  <button
+    (click)="condition = !condition"
+    [ngClass]="{ 'a': condition, 'b': !condition }"
+  >
+    Toggle condition to {{condition ? 'false' : 'true'}}
+  </button>
+</p>
+<p *appUnless="condition" class="unless a">
+  (A) This paragraph is displayed because the condition is false.
+</p>
+
+<p *appUnless="!condition" class="unless b">
+  (B) Although the condition is true, this paragraph is displayed because
+  appUnless is set to false.
+</p>
+
+<div style="margin-top:12em;"></div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
